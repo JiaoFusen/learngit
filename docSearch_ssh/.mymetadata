@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="docSearch_ssh"
+  id="myeclipse.1480418358417"
+  context-root="/docSearch_ssh"
+  j2ee-spec="6.0"
+  archive="docSearch_ssh.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

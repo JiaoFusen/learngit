@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>搜索页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/sstyle.css" rel='stylesheet' type='text/css' />
+<!-- Graph CSS -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- jQuery -->
+
+<!-- lined-icons -->
+<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+<!-- //lined-icons -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<!--clock init-->
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+			var i = 0;
+			$("#plus").click(function(){
+				if(i==0){
+					$("#searchCon2").show();
+				}
+				
+				if(i==1){
+					$("#searchCon3").show();
+				}
+				
+				if(i==2){
+					$("#searchCon4").show();
+				}
+				i++;
+				if(i>2)
+				{
+					i=2;
+				}
+			});
+			
+			
+			$("#minus").click(function(){
+				if(i==0){
+					$("#searchCon2").hide();
+				}
+				
+				if(i==1){
+					$("#searchCon3").hide();
+				}
+				if(i==2){
+					$("#searchCon4").hide();
+				}
+				i--;
+				
+				if(i<0){
+					i=0;
+				}
+			});
+			
+			
+		});
+	</script>
+</head> 
+<body>
+								<!--/login-->
+								
+									   <div class="error_page">
+												<!--/login-top-->
+												
+													<div class="error-top">
+													<h2 class="inner-tittle page">输入检索条件</h2><br/>
+													    <div class="login">
+														<h3 class="inner-tittle t-inner">搜索条件</h3>
+																<form action="searchServlet" method="post">
+																		<div class="form-group" id="searchCon1">				
+														          		<span class="glyphicon glyphicon-plus" id="plus" style="color: rgb(0, 198, 0);font-size: 20px;"></span>
+																		<span class="glyphicon glyphicon-minus" id="minus" style="color: rgb(0, 198, 0);font-size: 20px;"></span>
+																		 &nbsp;&nbsp;&nbsp;&nbsp;
+																		 <select name="selectCond">
+																			<option value="title">标题</option>
+																			<option value="author">作者</option>
+																			<option value="abstracts">摘要</option>
+																			<option value="keywords">关键词</option>
+																		</select>
+																		<input type="text" name="searchCont1" placeholder="请输入检索内容" required>
+																		</div>
+																		<div class="form-group" id="searchCon2" hidden="hidden">
+																		<select	name="andor1">
+																			<option value="yu">并且</option>
+																			<option value="huo">或者</option>
+																		</select>
+																		 <select name="selectCond2">
+																		 	<option value="author">作者</option>
+																			<option value="title">标题</option>
+																			<option value="abstracts">摘要</option>
+																			<option value="keywords">关键词</option>
+																		</select>
+																		<input type="text" name="searchCont2" placeholder="请输入检索内容">
+																		</div>
+																		<div class="form-group" id="searchCon3" hidden="hidden">
+																		<select	name="andor2">
+																			<option value="yu">并且</option>
+																			<option value="huo">或者</option>
+																		</select>
+																		 <select name="selectCond3">
+																		 	<option value="abstracts">摘要</option>
+																			<option value="title">标题</option>
+																			<option value="author">作者</option>
+																			
+																			<option value="keywords">关键词</option>
+																		</select>
+																		<input type="text" name="searchCont3" placeholder="请输入检索内容">
+																		</div>
+																		<div class="form-group" id="searchCon4" hidden="hidden">
+																		<select	name="andor3">
+																			<option value="yu">并且</option>
+																			<option value="huo">或者</option>
+																		</select>
+																		 <select name="selectCond4">
+																			<option value="keywords">关键词</option>
+																			<option value="title">标题</option>
+																			<option value="author">作者</option>
+																			<option value="abstracts">摘要</option>
+																			
+																		</select>
+																		<input type="text" name="searchCont4" placeholder="请输入检索内容">
+																		</div>
+																		
+																		<div class="sign-up">
+																					<input type="reset" value="清空">
+																					<input type="submit" value="检索">
+																			
+																		</div>
+																		<div class="clearfix"></div>
+																		
+																		
+																	</form>
+														</div>
+														
+													</div>
+													 </div>
+												<!--//login-top-->
+										  
+										  	<!--//login-->
+										    <!--footer section start-->
+										<div class="footer">
+										          <div class="error-btn">
+															<a class="read fourth" href="index.html">返回主页</a>
+															</div>
+										   <p>Copyright &copy; 2016.Company name All rights reserved.</p>
+										</div>
+									<!--footer section end-->
+									<!--/404-->
+<!--js -->
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+   <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
